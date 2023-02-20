@@ -61,7 +61,7 @@ class _TargetWeightState extends State<TargetWeight> {
                         print(
                           box.read("looseWeight"),
                         );
-                        SelectedTargetWeight = 1;
+                        selectedTargetWeight = 1;
                         widget.selectedindexWeight == true;
                         print(widget.selectedindexWeight);
                         targetWeight == "Loose Weight";
@@ -127,7 +127,7 @@ class _TargetWeightState extends State<TargetWeight> {
                         print(
                           box.read("gainMuscleAndLoseFat"),
                         );
-                        SelectedTargetWeight = 2;
+                        selectedTargetWeight = 2;
                         widget.selectedindexWeight == true;
                         targetWeight == "Gain muscle and lose fat";
                       },
@@ -192,7 +192,7 @@ class _TargetWeightState extends State<TargetWeight> {
                         print(
                           box.read("gainMuscleAndLoseFatIsSec"),
                         );
-                        SelectedTargetWeight = 3;
+                        selectedTargetWeight = 3;
                         widget.selectedindexWeight == true;
                         targetWeight ==
                             "Gain muscle and lose\nfat is secondary";
@@ -260,7 +260,7 @@ class _TargetWeightState extends State<TargetWeight> {
                         );
                         widget.selectedindexWeight == true;
 
-                        SelectedTargetWeight = 4;
+                        selectedTargetWeight = 4;
                         targetWeight == "Eat healthier without losing weight";
                       },
                     );
@@ -315,6 +315,4 @@ class _TargetWeightState extends State<TargetWeight> {
       ),
     );
   }
-
 }
-

@@ -1,23 +1,10 @@
-// ignore_for_file: unused_import
-
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-// import 'package:onboarding_ui/homenav.dart';
-// import 'package:onboarding_ui/models/form.dart';
-// import 'package:onboarding_ui/screens/Loader.dart';
-// import 'package:onboarding_ui/screens/Login.dart';
-// import 'package:onboarding_ui/screens/bodySummary.dart';
-// import 'package:onboarding_ui/screens/gender.dart';
-// import 'package:onboarding_ui/screens/grocery_list.dart';
-// import 'package:onboarding_ui/screens/health_conditions.dart';
-// import 'package:onboarding_ui/screens/physical.dart';
-import 'package:new_version/new_version.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 import 'package:wholesomeeten/screens/queOnboard.dart';
 
 import 'intro.dart';
@@ -26,16 +13,7 @@ import 'screens/gender.dart';
 void main() async {
   await GetStorage.init();
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   name: "Wholesome Eten",
-  //   options: const FirebaseOptions(
-  //     apiKey: 'AIzaSyCjSt3eWFZcW2fWljbvC2_B0rdhE9TmRiA',
-  //     appId: '1:60439083317:android:b2bf552f828d665727f47c',
-  //     messagingSenderId: '60439083317',
-  //     projectId: 'wholesomeetencom',
-  //     storageBucket: "wholesomeetencom.appspot.com",
-  //   ),
-  // );
+
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   //screen orientation
@@ -92,7 +70,6 @@ final getPages = [
     name: Routes.screen2,
     page: () => const OnboardOne(),
   ),
-
   GetPage(
     name: Routes.screen3,
     page: () => const GenderPage(),
@@ -113,23 +90,3 @@ void configLoading() {
     ..userInteractions = true
     ..dismissOnTap = false;
 }
-
-final data = {
-  "data": {
-    "gender": "Male",
-    "height": 160,
-    "weight": 110,
-    "age": 23,
-    "sleep": "5 - 6 hrs",
-    "physicalActivityAtWork": "2.4",
-    "physicalActivityAtLeisure": "1.6",
-    "dietPref": "Vegan",
-    "goalWeight": 60,
-    "allergies": ["Mushrooms", "Milk"],
-    "breakfast": ["Pesar Dosa", "Oat Meal"],
-    "lunchDinner": ["Biryani"],
-    "snacks": ["Mixed Nuts"],
-    "water": "4 - 7 Glasses",
-    "healthConditions": ["Diabeties-1", "less calcium"],
-  }
-};

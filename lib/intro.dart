@@ -23,7 +23,7 @@ class Intro extends StatefulWidget {
 }
 
 TextEditingController nameController = TextEditingController();
-int SelectedTargetWeight = 0;
+int selectedTargetWeight = 0;
 String targetWeight = '';
 
 bool isButtonClicked = false;
@@ -747,7 +747,7 @@ class _IntroState extends State<Intro> {
                         print(
                           box.read("looseWeight"),
                         );
-                        SelectedTargetWeight = 1;
+                        selectedTargetWeight = 1;
                         selectedindexWeight = true;
                         print(selectedindexWeight);
                         targetWeight = "Loose Weight";
@@ -813,7 +813,7 @@ class _IntroState extends State<Intro> {
                         print(
                           box.read("gainMuscleAndLoseFat"),
                         );
-                        SelectedTargetWeight = 2;
+                        selectedTargetWeight = 2;
                         selectedindexWeight = true;
                         targetWeight = "Gain muscle and lose fat";
                       },
@@ -878,7 +878,7 @@ class _IntroState extends State<Intro> {
                         print(
                           box.read("gainMuscleAndLoseFatIsSec"),
                         );
-                        SelectedTargetWeight = 3;
+                        selectedTargetWeight = 3;
                         selectedindexWeight = true;
                         targetWeight = "Gain muscle and lose\nfat is secondary";
                       },
@@ -945,7 +945,7 @@ class _IntroState extends State<Intro> {
                         );
                         selectedindexWeight = true;
 
-                        SelectedTargetWeight = 4;
+                        selectedTargetWeight = 4;
                         targetWeight = "Eat healthier without losing weight";
                       },
                     );
